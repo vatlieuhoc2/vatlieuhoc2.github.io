@@ -1,0 +1,26 @@
+<script type="text/javascript">
+function baogio()
+{
+num=document.the_form.kq.value;
+phut=document.the_form.kq2.value;
+num=eval(num)+1;
+
+if (num==60){
+phut=eval(phut)+1;
+num=0;
+}
+document.the_form.kq.value=num;
+document.the_form.kq2.value=phut;
+hengio=setTimeout("baogio();",1000);
+}
+</script>
+
+
+
+<body onload="baogio()">
+<form name="the_form">
+<input type="text" name="kq2" value="0"  size="1" readonly />Phút
+<input type="text" name="kq" value="0"  size="1" readonly />Giây<br />
+</form>
+<iframe src="CH2.html" width="1080" height="1700" title="Iframe Example"></iframe>
+    </body>
